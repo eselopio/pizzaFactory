@@ -1,6 +1,6 @@
 # Pizza Factory :pizza:
 
-![Alt Text](https://media.giphy.com/media/l41JGvofTyoFe8Io0/giphy.gif?resize=100,100)
+![Alt Text](https://github.com/{user}/{repo}/raw/master/path/to/image.gif)
 
 Esta app se contruye fundamentalmente en **ES6** :heart: 
 
