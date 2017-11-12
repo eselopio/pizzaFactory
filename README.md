@@ -1,6 +1,6 @@
 # Pizza Factory :pizza:
 
-![Alt Text](https://github.com/{user}/{repo}/raw/master/path/to/image.gif)
+![](http://www.pngmart.com/files/1/Pepperoni-Pizza.png)
 
 Esta app se contruye fundamentalmente en **ES6** :heart: 
 
@@ -42,7 +42,7 @@ Para arrancar el proyecto con nodemon y se refresqué automáticamente los cambi
 -------
 <code>npm test</code>
 
-For Testing we use:
+Para los test utilizamos:
 
  - Mocha
  - Chai
