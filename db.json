@@ -1,0 +1,22 @@
+{
+    "ingredients" : [
+        {
+            "id": 1,
+            "name": "tomato"
+        },
+        {
+            "id": 2,
+            "name": "onion"
+        }
+    ],
+    "masses" : [
+        {
+            "id": 1,
+            "name": "Integral"  
+        },
+        {
+            "id": 2,
+            "name": "normal"
+        }
+    ]
+}
