@@ -4,21 +4,27 @@
 
 Esta app se contruye fundamentalmente en **ES6** :heart: 
 
-Estructura
+Estructura :pizza:
 ---------
 ```json
 /app
-	/controllers 
+	/controllers
+		/pizzaController.js 
 	/routes 
-	/services 
+		/pizzaRoute.js
+	/services
+		/pizzaService.js 
 	Router.js 
 /config
 	config.js 
+	middleware.js
 /test 
 /utils
+	autoload.js
 server.js 
+db.json(Nuestra base de datos estatica)
 ```
-Instalación
+Instalación :pizza:
 -------
  1. Clona el repo :metal:
 
@@ -28,18 +34,28 @@ Instalación
 
     <code>npm install</code>
 
-Start 
-
+Start :pizza:
+-------
 *development*
 
-No tenemos base de datos asi que ocupamos json-server :tada:
+No tenemos base de datos asi que ocupamos json-server :tada: 
+
 <code>npm run json:server</code>
 
-Para arrancar el proyecto con nodemon y se refresqué automáticamente los cambios 
+Para arrancar el proyecto con nodemon y se refresqué automáticamente los cambios.
+
 <code>npm run-script dev</code>
 
-*testing*
+Algunos EndPoints :pizza: :
+
+<code>http://localhost:4000/pizza/ingredients</code>
+<code>http://localhost:4000/pizza/masses</code>
+
+
+*testing* :pizza:
 -------
+[ ] pendiente
+
 <code>npm test</code>
 
 Para los test utilizamos:
