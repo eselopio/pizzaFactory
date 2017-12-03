@@ -8,6 +8,15 @@ Estructura :pizza:
 ---------
 ```json
 /app
+	/client
+		/build
+		/css
+		/js
+			/main.js
+			/pizza-service-mock.js
+			/pizza-service.js
+			/request.js
+		/index.html
 	/controllers
 		/pizzaController.js 
 	/routes 
@@ -49,13 +58,17 @@ Para arrancar el proyecto con nodemon y se refresqué automáticamente los cambi
 Algunos EndPoints :pizza: :
 
 <code>http://localhost:4000/pizza/ingredients</code>
+
 <code>http://localhost:4000/pizza/masses</code>
 
 
-*Start PizzaFront Es6* :pizza:
+Start PizzaFront Es6* :pizza:
+-------
 
 <code>npm install </code>
+
 <code>npm run webpack </code>
+
 <code>npm run start </code>
 
 
