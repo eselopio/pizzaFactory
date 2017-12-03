@@ -34,7 +34,7 @@ Instalación :pizza:
 
     <code>npm install</code>
 
-Start :pizza:
+Start PizzaBackend Nodejs :pizza:
 -------
 *development*
 
@@ -50,6 +50,13 @@ Algunos EndPoints :pizza: :
 
 <code>http://localhost:4000/pizza/ingredients</code>
 <code>http://localhost:4000/pizza/masses</code>
+
+
+*Start PizzaFront Es6* :pizza:
+
+<code>npm install </code>
+<code>npm run webpack </code>
+<code>npm run start </code>
 
 
 *testing* :pizza:

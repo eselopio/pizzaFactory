@@ -70,40 +70,49 @@
 "use strict";
 
 
-// XMLHttpRequest wrapper using callbacks
-function rs(obj, successHandler, errorHandler) {
-    var xhr = new XMLHttpRequest();
-    xhr.open(obj.method || "GET", obj.url);
+var _pizzaServiceMock = __webpack_require__(1);
 
-    if (obj.headers) {
-        Object.keys(obj.headers).forEach(function (key) {
-            xhr.setRequestHeader(key, obj.headers[key]);
-        });
-    }
-    xhr.onload = function () {
-        if (xhr.status >= 200 && xhr.status < 300) {
-            successHandler(xhr.response);
-        } else {
-            errorHandler(xhr.statusText);
-        }
-    };
-    xhr.onerror = function () {
-        errorHandler(xhr.statusText);
-    };
-    xhr.send(obj.body);
-}
+var services = _interopRequireWildcard(_pizzaServiceMock);
 
-rs({ url: "http://localhost:4000/pizza/ingredients" }, function (data) {
-    var ingredients = JSON.parse(data);
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+services.findAllIngredients().then(function (ingredients) {
+    console.log("ingredientes", ingredients);
     var html = "";
-
     ingredients.forEach(function (ingredient) {
-        html += "<div><img src=\"\" /><div> " + ingredient.name + " <p> id : " + ingredient.id + " </p></div></div>";
+        html += "\n                        <div\n                            ><img src=\"\" />\n                            <div> " + ingredient.name + " \n                                <p> id : " + ingredient.id + " </p>\n                            </div>\n                        </div>";
     });
     document.getElementById("list").innerHTML = html;
-}, function (error) {
-    console.log(error);
+}).catch(function (error) {
+    return console.log(error);
 });
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var ingredients = [{
+  "id": 1,
+  "name": "tomato"
+}, {
+  "id": 2,
+  "name": "onion"
+}, {
+  "id": 3,
+  "name": "cheese"
+}];
+
+var findAllIngredients = exports.findAllIngredients = function findAllIngredients() {
+  return new Promise(function (resolve) {
+    return resolve(ingredients);
+  });
+};
 
 /***/ })
 /******/ ]);
