@@ -16,5 +16,9 @@
     "http-server": "^0.10.0",
     "nodemon": "^1.12.1",
     "webpack": "^3.9.1"
+  },
+  "dependencies": {
+    "choices.js": "^3.0.2",
+    "lodash": "^4.17.4"
   }
 }
