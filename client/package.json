@@ -1,0 +1,24 @@
+{
+  "name": "front-pizza",
+  "version": "1.0.0",
+  "description": "app Front the best pizza factory",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server",
+    "webpack": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "http-server": "^0.10.0",
+    "nodemon": "^1.12.1",
+    "webpack": "^3.9.1"
+  },
+  "dependencies": {
+    "choices.js": "^3.0.2",
+    "lodash.find": "^4.6.0"
+  }
+}

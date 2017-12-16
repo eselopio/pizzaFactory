@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/styles/css/base.min.css">
+    <link rel="stylesheet" href="assets/styles/css/choices.min.css">
+    <link rel="stylesheet" href="assets/styles/css/flexboxgrid.min.css" type="text/css">
+    <script src="/assets/scripts/dist/choices.min.js"></script>
+</head>
+<body>
+    <div class="row">
+        <div class="col-xs-12 col-md-4 col-lg-4">
+            <div class="box">
+                <label for="choices-text-remove-button">Select Ingredients :</label>
+                <select class="form-control" data-trigger name="choices-multiple-ingredients" id="choices-multiple-ingredients" placeholder="Ingredients" multiple>
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4 col-lg-4">
+            <div class="box">
+                <label for="choices-text-remove-button">Select Masses :</label>
+                <select class="form-control" data-trigger name="choices-multiple-masses" id="choices-multiple-masses" placeholder="Masses" multiple>
+                </select>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row center-xs">
+        <div class="col-xs-4">
+            <div class="box">
+                <label for="choices-text-remove-button">Total : $ <span id="totalPizza"></span> </label>
+            </div>
+        </div>
+    </div>
+
+<script src="build/app.bundle.js"></script>
+</body> 
+</html>
