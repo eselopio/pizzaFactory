@@ -19,6 +19,6 @@
   },
   "dependencies": {
     "choices.js": "^3.0.2",
-    "lodash": "^4.17.4"
+    "lodash.find": "^4.6.0"
   }
 }

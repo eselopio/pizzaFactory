@@ -1,4 +1,4 @@
-let masses = [
+const masses = [
   {
     "id": "1",
     "name": "traditional"
@@ -13,7 +13,7 @@ let masses = [
   }
 ];
 
-let ingredients = [
+const ingredients = [
     {
       "id": "1",
       "name": "tomato",

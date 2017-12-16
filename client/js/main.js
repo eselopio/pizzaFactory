@@ -1,5 +1,4 @@
-var _ = require('lodash');
-
+import find from 'lodash/find';
 import * as services from "./pizza-service-mock";
 
 const listPrices = 0;
@@ -23,9 +22,9 @@ class ModuloPizzaFront {
         });
     }
     configFiltros(){
-        let mPizza = this;
+        const mPizza = this;
         return new Promise((resolve, reject) =>{
-                document.addEventListener('DOMContentLoaded', function() {
+                document.addEventListener('DOMContentLoaded', ()=> {
 
                     var multipleDefault = new Choices(document.getElementById('choices-multiple-ingredients'), {
                       delimiter: ',',
@@ -33,25 +32,29 @@ class ModuloPizzaFront {
                       maxItemCount: 5,
                       removeItemButton: true
                     });
-
-                    multipleDefault.passedElement.addEventListener('addItem', function(event) {
-                        var i = _.find(mPizza.listPrices, function(o){ return o.id == event.detail.value});
-                         mPizza.totalPizza = mPizza.totalPizza + i.price;
-                         document.getElementById("totalPizza").innerHTML = parseInt(mPizza.totalPizza);
-                      }, false);
-
-                      multipleDefault.passedElement.addEventListener('removeItem', function(event) {
-                        var i = _.find(mPizza.listPrices, function(o){ return o.id == event.detail.value});
-                         mPizza.totalPizza = mPizza.totalPizza - i.price;
-                         document.getElementById("totalPizza").innerHTML = parseInt(mPizza.totalPizza);
-                      }, false);
-                      
                     var multipleDefaultMasses = new Choices(document.getElementById('choices-multiple-masses'), {
                         delimiter: ',',
                         editItems: true,
                         maxItemCount: 1,
                         removeItemButton: true
-                      });
+                    });
+
+                    multipleDefault.passedElement.addEventListener('addItem',(event) => {
+                        let i = find(mPizza.listPrices, (o)=>{ 
+                            return o.id == event.detail.value 
+                        });
+                        mPizza.totalPizza = mPizza.totalPizza + i.price;
+                        document.getElementById("totalPizza").innerHTML = parseInt(mPizza.totalPizza);
+                      }, false);
+
+                      multipleDefault.passedElement.addEventListener('removeItem', (event) => {
+                        let i = find(mPizza.listPrices, (o)=> {
+                             return o.id == event.detail.value
+                        });
+                        mPizza.totalPizza = mPizza.totalPizza - i.price;
+                        document.getElementById("totalPizza").innerHTML = parseInt(mPizza.totalPizza);
+                      }, false);
+                    
                   });
 
                 resolve();
@@ -61,9 +64,9 @@ class ModuloPizzaFront {
         let select ="";
             elements.forEach((element, index)=>{
                 select += `
-                <option value=${element.id} >
-                    ${element.name}
-                </option>`;
+                    <option value=${element.id} >
+                        ${element.name}
+                    </option>`;
             });
         return(select);
     }
